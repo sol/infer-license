@@ -1,4 +1,5 @@
 name: infer-license
+version: 0.1.0
 
 copyright: (c) 2018 Simon Hengel
 author: Simon Hengel <sol@typeful.net>

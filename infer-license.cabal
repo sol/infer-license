@@ -4,10 +4,10 @@ cabal-version: >= 1.10
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a42d6b51aa82f9ad21359527b75ef8d8bcabe4f67080697a7a99278fd573236c
+-- hash: b0e095015436197517d7c00b9d8925c6386c0f123a0ef7165ec6974e6853cc92
 
 name:           infer-license
-version:        0.0.0
+version:        0.1.0
 synopsis:       Infer software license from a given license file
 category:       Development
 bug-reports:    https://github.com/sol/infer-license/issues
