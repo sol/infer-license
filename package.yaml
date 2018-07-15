@@ -4,15 +4,22 @@ copyright: (c) 2018 Simon Hengel
 author: Simon Hengel <sol@typeful.net>
 maintainer: Simon Hengel <sol@typeful.net>
 
+category: Development
+synopsis: Infer software license from a given license file
+
+homepage: null
+
+github: sol/infer-license
+
 extra-source-files:
   - test/resources/**/*
 
 ghc-options: -Wall
 
 dependencies:
-  - base == 4.*
+  - base >= 4.9 && < 5
   - text
-  - text-metrics
+  - text-metrics >= 0.3.0 && < 0.4
 
 library:
   source-dirs: src

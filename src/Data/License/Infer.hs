@@ -40,9 +40,11 @@ normalize :: String -> String
 normalize = map toLower . filter isAlphaNum
 
 inferLicenseByLevenshtein :: String -> Maybe License
-inferLicenseByLevenshtein (T.pack -> xs) = case maximumBy (comparing snd) (probabilities xs) of
-  (license, n) | n > 0.85 -> Just license
-  _ -> Nothing
+inferLicenseByLevenshtein (T.pack -> xs)
+  | T.length xs > 2000 = Nothing
+  | otherwise = case maximumBy (comparing snd) (probabilities xs) of
+      (license, n) | n > 0.85 -> Just license
+      _ -> Nothing
 
 probabilities :: Text -> [(License, Double)]
 probabilities license = map (fmap probability) licenses
