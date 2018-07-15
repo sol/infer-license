@@ -1,0 +1,54 @@
+cabal-version: >= 1.10
+
+-- This file has been generated from package.yaml by hpack version 0.29.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: bafca53a6d6397931699369b01b395846d62a85f18efee80d2e72fdeddc59c5f
+
+name:           infer-license
+version:        0.0.0
+author:         Simon Hengel <sol@typeful.net>
+maintainer:     Simon Hengel <sol@typeful.net>
+copyright:      (c) 2018 Simon Hengel
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    test/resources/BSD2
+    test/resources/BSD3
+    test/resources/BSD4
+    test/resources/MIT
+
+library
+  exposed-modules:
+      Data.License.Infer
+  other-modules:
+      Data.License.SpdxLicenses
+      Data.License.Type
+      Paths_infer_license
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base ==4.*
+    , text
+    , text-metrics
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Data.License.InferSpec
+      Paths_infer_license
+  hs-source-dirs:
+      test
+  ghc-options: -Wall
+  build-depends:
+      base ==4.*
+    , hspec ==2.*
+    , infer-license
+    , text
+    , text-metrics
+  default-language: Haskell2010

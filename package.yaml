@@ -1,0 +1,28 @@
+name: infer-license
+
+copyright: (c) 2018 Simon Hengel
+author: Simon Hengel <sol@typeful.net>
+maintainer: Simon Hengel <sol@typeful.net>
+
+extra-source-files:
+  - test/resources/**/*
+
+ghc-options: -Wall
+
+dependencies:
+  - base == 4.*
+  - text
+  - text-metrics
+
+library:
+  source-dirs: src
+  exposed-modules: Data.License.Infer
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+    dependencies:
+      - infer-license
+      - hspec == 2.*
