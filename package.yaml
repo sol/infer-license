@@ -20,6 +20,8 @@ ghc-options: -Wall
 dependencies:
   - base >= 4.9 && < 5
   - text
+  - directory >= 1.2.5.0
+  - filepath
   - text-metrics >= 0.3.0 && < 0.4
 
 library:

@@ -2,6 +2,7 @@ module Data.License.Type where
 
 data License =
     MIT
+  | ISC
 
   | BSD2
   | BSD3
@@ -14,4 +15,7 @@ data License =
   | LGPLv3
 
   | AGPLv3
+
+  | MPL_2_0
+  | Apache_2_0
   deriving (Eq, Show, Bounded, Enum)
